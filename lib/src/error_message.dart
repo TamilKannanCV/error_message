@@ -79,7 +79,7 @@ class ErrorMessage extends StatelessWidget {
                   ElevatedButton(
                     child: Text(
                       buttonLabel ?? "Try again",
-                      style: Theme.of(context).textTheme.subtitle1,
+                      style: Theme.of(context).textTheme.button,
                     ),
                     onPressed: onPressed,
                   ),

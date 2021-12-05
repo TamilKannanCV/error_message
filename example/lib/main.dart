@@ -23,10 +23,11 @@ class _MainAppState extends State<MainApp> {
     return Scaffold(
       body: Center(
           child: ErrorMessage(
-        icon: Icon(Icons.error),
-        title: "Error Title",
-        description: "Error description",
-      )),
+              icon: Icon(Icons.error),
+              title: "Error Title",
+              description: "Error description",
+              buttonLabel: "BUTTON",
+              onPressed: () {})),
     );
   }
 }
