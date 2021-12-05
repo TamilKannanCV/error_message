@@ -1,6 +1,6 @@
 name: error_message
 description: This plugin lets you show a message in a simple way.
-version: 0.0.1
+version: 0.0.2
 repository: https://github.com/TamilKannanCV/error_message.git
 
 environment:
