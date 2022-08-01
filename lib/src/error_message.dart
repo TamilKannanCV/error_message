@@ -46,17 +46,13 @@ class ErrorMessage extends StatelessWidget {
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: (themeColor != null)
-                        ? themeColor?.withOpacity(.1)
-                        : colorScheme.primary.withOpacity(.1),
+                    color: (themeColor != null) ? themeColor?.withOpacity(.1) : colorScheme.primary.withOpacity(.1),
                   ),
                   child: Theme(
                     data: Theme.of(context).copyWith(
                       iconTheme: IconThemeData(
                         size: 40,
-                        color: (themeColor != null)
-                            ? themeColor
-                            : colorScheme.primary,
+                        color: (themeColor != null) ? themeColor : colorScheme.primary,
                       ),
                     ),
                     child: icon,
@@ -65,23 +61,28 @@ class ErrorMessage extends StatelessWidget {
                 const SizedBox(height: 16),
                 Text(
                   title,
+                  textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.headline6,
                 ),
                 if (description != null) ...[
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 5.0),
                   Text(
                     description!,
                     textAlign: TextAlign.center,
-                  ),
+                  )
                 ],
                 if (onPressed != null) ...[
-                  const SizedBox(height: 32),
-                  ElevatedButton(
-                    child: Text(
-                      buttonLabel ?? "Try again",
-                      style: Theme.of(context).textTheme.button,
-                    ),
+                  const SizedBox(height: 15.0),
+                  MaterialButton(
+                    elevation: 0.0,
+                    highlightElevation: 0.0,
                     onPressed: onPressed,
+                    child: Text(buttonLabel ?? "Try again"),
+                    color: colorScheme.primary,
+                    textColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(100.0),
+                    ),
                   ),
                 ]
               ],
