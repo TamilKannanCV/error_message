@@ -73,15 +73,11 @@ class ErrorMessage extends StatelessWidget {
                 ],
                 if (onPressed != null) ...[
                   const SizedBox(height: 15.0),
-                  MaterialButton(
-                    elevation: 0.0,
-                    highlightElevation: 0.0,
+                  FilledButton(
                     onPressed: onPressed,
                     child: Text(buttonLabel ?? "Try again"),
-                    color: colorScheme.primary,
-                    textColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(100.0),
+                    style: FilledButton.styleFrom(
+                      backgroundColor: colorScheme.primary,
                     ),
                   ),
                 ]

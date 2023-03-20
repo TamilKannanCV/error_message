@@ -9,3 +9,7 @@
 ## 0.0.3
 
 * Changed Button style to Material Button
+  
+## 0.0.4
+
+* Changed Material Button to FilledButton
